@@ -1,0 +1,1 @@
+Contains useful dotfiles (vimrc, zshrc, oh-my-zsh). To properly setup a machine to symlink to this directory (and install zsh if it doesn't have it), simply run setup_symlinks.sh
