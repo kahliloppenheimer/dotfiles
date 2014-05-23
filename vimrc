@@ -22,15 +22,18 @@ set tabstop=4
 " number of spaces in tab when editing
 set softtabstop=4
 
+" (not exactly sure what this does, but it fixed an issue where vim was
+"  indenting with an extra tab after a code block start)
+set shiftwidth=4
+
 " tabs are spaces
 set expandtab
 
 " use indentation of previous line
 set autoindent
 
-" use intelligent indentation for C
-set smartindent
-
+" Indentation optimized for C/C++
+set cindent
 
 """""""""""""""" UI CONFIG
 
