@@ -27,6 +27,9 @@ set showcmd
 " highlight current line
 set cursorline
 
+" show column line at 81 character mark
+set colorcolumn=81
+
 " load filetype-specific indent files
 filetype indent on
 
@@ -47,5 +50,11 @@ set incsearch
 
 " highlight matches
 set hlsearch
+
+" Passwords are case insensitive ...                         
+set ignorecase 
+
+" ... Unless they contain at least 1 capital letter
+set smartcase  
 
 
