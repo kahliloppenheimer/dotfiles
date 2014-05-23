@@ -1,10 +1,20 @@
-"COLORS
+""""""""""""""""" COMPATABILITY
+" disable vi compatibility (emulation of old bugs)
+set nocompatible
+
+" set UTF-8 encoding
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+
+""""""""""""""""" COLORS
 
 " enable syntax processing
 syntax enable
 
 
-" SPACES AND TABS
+""""""""""""""""" SPACES AND TABS
 
 " number of visual spaces per tab
 set tabstop=4
@@ -15,8 +25,14 @@ set softtabstop=4
 " tabs are spaces
 set expandtab
 
+" use indentation of previous line
+set autoindent
 
-" UI CONFIG
+" use intelligent indentation for C
+set smartindent
+
+
+"""""""""""""""" UI CONFIG
 
 " show line numbers
 set number
@@ -43,7 +59,7 @@ set lazyredraw
 set showmatch
 
 
-" SEARCHING
+"""""""""""""""" SEARCHING
 
 " search as characters are entered
 set incsearch
@@ -51,10 +67,9 @@ set incsearch
 " highlight matches
 set hlsearch
 
-" Passwords are case insensitive ...                         
+" search words are case insensitive ...                         
 set ignorecase 
 
 " ... Unless they contain at least 1 capital letter
 set smartcase  
-
 
