@@ -71,3 +71,5 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+#Checks to see if ~/dotfiles (which contains all config files) needs to be pulled from the remote to update
+git -C ~/dotfiles pull
