@@ -7,11 +7,11 @@ if [ $LOCAL = $REMOTE ]; then
     #Up to date 
 elif [ $LOCAL = $BASE ]; then
     #Need to pull and source zshrc
-    git pull
+    git -C ~/dotfiles pull
     source ~/.zshrc
 elif [ $REMOTE = $BASE ]; then
     #Need to push 
-    git push
+    git -C ~/dotfiles push
 else
     #Diverged
 fi
