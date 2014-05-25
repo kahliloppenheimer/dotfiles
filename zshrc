@@ -5,13 +5,16 @@ BASE=$(git -C ~/dotfiles merge-base @ @{u})
 
 if [ $LOCAL = $REMOTE ]; then
     #Up to date 
+    echo "~/dotfiles is up to date!"
 elif [ $LOCAL = $BASE ]; then
     #Need to pull and source zshrc
-    git -C ~/dotfiles pull
+    git -q -C ~/dotfiles pull
     source ~/.zshrc
+    echo "~/dotfiles was updated from github repo!"
 elif [ $REMOTE = $BASE ]; then
     #Need to push 
-    git -C ~/dotfiles push
+    git -q -C ~/dotfiles push
+    echo "~/dotfiles was just pushed to update github repo!"
 else
     #Diverged
 fi
