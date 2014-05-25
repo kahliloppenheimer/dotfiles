@@ -8,12 +8,12 @@ if [ $LOCAL = $REMOTE ]; then
     echo "~/dotfiles is up to date!"
 elif [ $LOCAL = $BASE ]; then
     #Need to pull and source zshrc
-    git -q -C ~/dotfiles pull
+    git -C ~/dotfiles pull &> /dev/null
     source ~/.zshrc
     echo "~/dotfiles was updated from github repo!"
 elif [ $REMOTE = $BASE ]; then
     #Need to push 
-    git -q -C ~/dotfiles push
+    git -C ~/dotfiles push &> /dev/null
     echo "~/dotfiles was just pushed to update github repo!"
 else
     #Diverged
