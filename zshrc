@@ -71,5 +71,21 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-#Checks to see if ~/dotfiles (which contains all config files) needs to be pulled from the remote to update
-git -C ~/dotfiles pull
+#Checks to see if ~/dotfiles (which contains all config files) needs to be pulled from the remote to update. This script was modified from a script overred at http://stackoverflow.com/questions/3258243/git-check-if-pull-needed
+cd ~/dotfiles
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse @{u})
+BASE=$(git merge-base @ @{u})
+
+if [ $LOCAL = $REMOTE ]; then
+    #Up to date 
+elif [ $LOCAL = $BASE ]; then
+    #Need to pull and source zshrc
+    git pull
+    source ~/.zshrc
+elif [ $REMOTE = $BASE ]; then
+    #Need to push 
+else
+    #Diverged
+fi
+cd ~
