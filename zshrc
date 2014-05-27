@@ -77,12 +77,12 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/X11/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -90,3 +90,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# if alternate key bindings in ~/.Xmodmap exist, make those changes
+if [ -f ~/.Xmodmap ]; then
+    # run xmodmap to put the key binding changes in effect
+    xmodmap ~/.Xmodmap
+fi
