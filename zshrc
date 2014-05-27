@@ -95,3 +95,16 @@ if [ -f ~/.Xmodmap ]; then
     # run xmodmap to put the key binding changes in effect
     xmodmap ~/.Xmodmap
 fi
+
+
+
+#############################################
+# VERTICA SPECIFIC CONFIG
+
+#Add standards/sbin (allplans, etc.) to path if they exist
+if [ -d ~/standards/sbin/ ]; then
+    export PATH=$PATH:~/standards/sbin/
+fi
+
+
+
