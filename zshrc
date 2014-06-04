@@ -29,10 +29,11 @@ ZSH_THEME="edvardm"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias 127b="/Users/kahliloppenheimer/Google\ Drive/school/college/2014_spring/cosi127b"
-alias 12b="/Users/kahliloppenheimer/Google\ Drive/school/college/2014_spring/cosi12b"
-alias 21b="/Users/kahliloppenheimer/Google\ Drive/school/college/2014_spring/cosi21b"
-alias dl="~/Downloads/"
+
+# Adds aliases from zsh_aliases if it exists.
+if [ -f ~/.zsh_aliases ]; then
+    . ~/.zsh_aliases
+fi
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
