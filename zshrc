@@ -101,6 +101,9 @@ fi
 #############################################
 # VERTICA SPECIFIC CONFIG
 
+#Export $SVNROOT for SVN access
+export SVNROOT="svn+ssh://svn/repos"
+
 #Add standards/sbin (allplans, etc.) to path if they exist
 if [ -d ~/standards/sbin/ ]; then
     export PATH=$PATH:~/standards/sbin/
