@@ -92,16 +92,14 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# if alternate key bindings in ~/.Xmodmap exist, make those changes
-if [ -f ~/.Xmodmap ]; then
-    # run xmodmap to put the key binding changes in effect
-    xmodmap ~/.Xmodmap
-fi
-
-
-
 #############################################
 # VERTICA SPECIFIC CONFIG
+
+# If ~/.Xmodmap exists, run it to add custom key
+# configurations
+if [ -f ~/.Xmodmap \; then
+    xmodmap ~/.Xmodmap
+fi
 
 #Export $SVNROOT for SVN access
 export SVNROOT="svn+ssh://svn/repos"
