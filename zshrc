@@ -30,9 +30,10 @@ ZSH_THEME="edvardm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Adds aliases from zsh_aliases if it exists.
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
+# Store aliases in separate file for better organization if possible
+# Adds aliases from ~/.aliases if it exists.
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
 fi
 
 # Set to this to use case-sensitive completion
