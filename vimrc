@@ -1,5 +1,7 @@
 """"""""""""""""" COMPATABILITY
 " disable vi compatibility (emulation of old bugs)
+" Notable this must be done first because other settings
+" depend on this
 set nocompatible
 
 " set UTF-8 encoding
