@@ -97,7 +97,7 @@ fi
 
 # If ~/.Xmodmap exists, run it to add custom key
 # configurations
-if [ -f ~/.Xmodmap \; then
+if [ -f ~/.Xmodmap ]; then
     xmodmap ~/.Xmodmap
 fi
 
