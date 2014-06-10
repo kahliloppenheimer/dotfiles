@@ -79,6 +79,10 @@ set ignorecase
 set smartcase  
 
 
+"""""""""""""""" KEY REMAPPING
+let mapleader=","
+
+
 """"""""""""""" EXTENSIONS
 
 if has("cscope") && filereadable("/usr/bin/cscope")
