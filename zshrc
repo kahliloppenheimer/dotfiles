@@ -109,5 +109,9 @@ if [ -d ~/standards/sbin/ ]; then
     export PATH=$PATH:~/standards/sbin/
 fi
 
+#ccache setup
+export CC="ccache gcc"
+export CXX="ccache g++"
+export CCACHE_DIR="/home/$USER/ccache"
 
 
