@@ -4,7 +4,6 @@ REMOTE=$(git -C ~/dotfiles rev-parse @{u})
 BASE=$(git -C ~/dotfiles merge-base @ @{u})
 
 if [ $LOCAL = $REMOTE ]; then
-    #Up to date 
 elif [ $LOCAL = $BASE ]; then
     #Need to pull and source zshrc
     git -C ~/dotfiles pull &> /dev/null
@@ -30,11 +29,19 @@ ZSH_THEME="edvardm"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Store aliases in separate file for better organization if possible
-# Adds aliases from ~/.aliases if it exists.
-if [ -f ~/.aliases ]; then
-    source ~/.aliases
+# Store aliases in separate files for better organization. 
+
+# contains machine independant aliases (i.e. "ls --color=auto")
+if [ -f ~/.global_aliases ]; then
+    source ~/.global_aliases
 fi
+
+# contains machine dependant aliases (i.e. directory names)
+if [ -f ~/.user_aliases ]; then
+    source ~/.user_aliases
+fi
+
+
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
