@@ -37,6 +37,7 @@ set autoindent
 " Indentation optimized for C/C++
 set cindent
 
+
 """""""""""""""" UI CONFIG
 
 " show line numbers
@@ -81,6 +82,9 @@ set smartcase
 
 """""""""""""""" KEY REMAPPING
 let mapleader=","
+
+" Adds '_' to the list of word boundaries so that w will stop at underscores
+set iskeyword-=_
 
 
 """"""""""""""" EXTENSIONS

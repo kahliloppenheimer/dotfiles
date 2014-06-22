@@ -77,7 +77,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx rails ruby github node npm brew)
+plugins=(git osx rails ruby github node npm brew ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,5 +116,9 @@ if [ -d ~/standards/sbin/ ]; then
     export PATH=$PATH:~/standards/sbin/
 fi
 
+#ccache setup
+export CC="ccache gcc"
+export CXX="ccache g++"
+export CCACHE_DIR="/home/$USER/ccache"
 
 
