@@ -6,6 +6,7 @@ BASE=$(git -C ~/dotfiles merge-base @ @{u})
 if [ $LOCAL = $REMOTE ]; then
 elif [ $LOCAL = $BASE ]; then
     #Need to pull and source zshrc
+    git -C ~/dotfiles commit -m "automated commit before pull"
     git -C ~/dotfiles pull &> /dev/null
     source ~/.zshrc
     echo "~/dotfiles was updated from github repo!"
