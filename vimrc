@@ -13,13 +13,17 @@ filetype off " Needed to be off for vundle, but is enabled later on
 
 " Vundle setup 
 set rtp+=~/.vim/bundle/vundle
+
+" All plugins must be added after this line
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
-Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'gmarik/vundle'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
 
-filetype on " reenabled after vundle setup complete
+" All plugins must be added before this line
+" call vundle#end()
+filetype plugin indent on " reenabled after vundle setup complete
 
 " Cscope setup
 if has("cscope") && filereadable("/usr/bin/cscope")

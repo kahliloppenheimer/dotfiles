@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/koppenheimer/dotfiles'
 let g:netrw_dirhist_2='/home/koppenheimer/Documents/notes'
 let g:netrw_dirhist_3='/home/koppenheimer/svn/ko_1_1_gua/vertica'
 let g:netrw_dirhist_4='/home/koppenheimer/dotfiles/vim/bundle/vundle'
+let g:netrw_dirhist_5='/Users/kahliloppenheimer/dotfiles/vim/bundle/vundle'
