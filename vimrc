@@ -3,12 +3,40 @@
 " Notable this must be done first because other settings
 " depend on this
 set nocompatible
-
 " set UTF-8 encoding
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
+""""""""""""""" EXTENSIONS
+filetype off " Needed to be off for vundle, but is enabled later on
+
+" Vundle setup 
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/syntastic'
+Bundle 'Valloric/YouCompleteMe'
+
+filetype on " reenabled after vundle setup complete
+
+" Cscope setup
+if has("cscope") && filereadable("/usr/bin/cscope")
+    set csprg=/usr/bin/cscope
+    set csto=0
+    set cst
+    set nocsverb
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+    set nocscopeverbose
+endif
 
 """"""""""""""""" COLORS
 
@@ -87,28 +115,4 @@ let mapleader=","
 set iskeyword-=_
 
 
-""""""""""""""" EXTENSIONS
-
-" Pathogen
-execute pathogen#infect()
-call pathogen#helptags() " generate helptags for everything in 'runtimepath'
-filetype plugin indent on
-
-
-" Cscope
-if has("cscope") && filereadable("/usr/bin/cscope")
-    set csprg=/usr/bin/cscope
-    set csto=0
-    set cst
-    set nocsverb
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-    " else add database pointed to by environment
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    set csverb
-    set nocscopeverbose
-endif
 
