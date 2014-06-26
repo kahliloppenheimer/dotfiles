@@ -89,6 +89,13 @@ set iskeyword-=_
 
 """"""""""""""" EXTENSIONS
 
+" Pathogen
+call pathogen#infect()
+call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+filetype plugin indent on
+
+
+" Cscope
 if has("cscope") && filereadable("/usr/bin/cscope")
     set csprg=/usr/bin/cscope
     set csto=0
