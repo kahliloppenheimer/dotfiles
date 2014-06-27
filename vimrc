@@ -34,7 +34,7 @@ syntax enable
 """"""""""""""""" SPACES AND TABS
 
 " Fix vim backspace
-set backspace=indent, eol, start
+set backspace=indent,eol,start
 " number of visual spaces per tab
 set tabstop=4
 
