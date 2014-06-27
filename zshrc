@@ -3,25 +3,22 @@ LOCAL=$(git -C ~/dotfiles rev-parse @)
 REMOTE=$(git -C ~/dotfiles rev-parse @{u})
 BASE=$(git -C ~/dotfiles merge-base @ @{u})
 
-git -C ~/dotfiles add --all
-git -C ~/dotfiles commit -m "automated commit before pull"
-git -C ~/dotfiles pull &> /dev/null
-git -C ~/dotfiles push &> /dev/null
-
-# if [ $LOCAL = $REMOTE ]; then
-# elif [ $LOCAL = $BASE ]; then
-    #Need to pull and source zshrc
-    # git -C ~/dotfiles commit -m "automated commit before pull"
-    # git -C ~/dotfiles pull &> /dev/null
-    # source ~/.zshrc
-    # echo "~/dotfiles was updated from github repo!"
-# elif [ $REMOTE = $BASE ]; then
-    #Need to push 
-    # git -C ~/dotfiles push &> /dev/null
-    # echo "~/dotfiles was just pushed to update github repo!"
-# else
-    #Diverged
-# fi
+if [ $LOCAL = $REMOTE ]; then
+    # Up to date!
+elif [ $LOCAL = $BASE ]; then
+    # Need to pull and source zshrc
+    git -C ~/dotfiles add --all
+    git -C ~/dotfiles commit -m "automated commit before pull"
+    git -C ~/dotfiles pull &> /dev/null
+    echo "~/dotfiles was updated from github repo!"
+    source ~/.zshrc
+elif [ $REMOTE = $BASE ]; then
+    # Need to push 
+    git -C ~/dotfiles push &> /dev/null
+    echo "~/dotfiles was just pushed to update github repo!"
+else
+    # Diverged
+fi
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
