@@ -62,3 +62,21 @@ fi
 }
 
 install_zsh
+
+# install vundle
+echo "installing vundle"
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+echo "remember that you must add 'set rtp+=~/.vim/bundle/vundle' to use vundle" 
+
+vim +PluginInstall +qall
+
+# install YouCompleteMe vim plugin
+if [ -d ~/.vim/bundle/YouCompleteMe ]; then
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.sh --clang-completer
+    cd ~/dotfiles
+fi
+
+
+
+
