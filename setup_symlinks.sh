@@ -13,7 +13,7 @@ dir=~/dotfiles
 olddir=~/dotfiles_old             
 
 # list of files/folders to symlink in homedir
-files="vimrc vim zshrc oh-my-zsh global_aliases"   
+files="vimrc vim zshrc oh-my-zsh global_aliases ycm_extra_conf.py"   
 
 ##########
 
