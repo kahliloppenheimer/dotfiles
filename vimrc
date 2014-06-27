@@ -39,7 +39,7 @@ let g:ycm_confirm_extra_conf = 0
 let g:syntastic_always_populate_loc_list = 1
 " Allow reading of cags
 let g:ycm_collect_identifiers_from_tags_files = 1
-set tags+=./.tags
+set tags+=./tags;~
 
 
 
