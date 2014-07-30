@@ -1,24 +1,3 @@
-#Checks to see if ~/dotfiles (which contains all config files) needs to be pulled or pushed from the remote to update. This script was modified from a script overred at http://stackoverflow.com/questions/3258243/git-check-if-pull-needed
-LOCAL=$(git -C ~/dotfiles rev-parse @)
-REMOTE=$(git -C ~/dotfiles rev-parse @{u})
-BASE=$(git -C ~/dotfiles merge-base @ @{u})
-
-if [ $LOCAL = $REMOTE ]; then
-    # Up to date!
-elif [ $LOCAL = $BASE ]; then
-    # Need to pull and source zshrc
-    git -C ~/dotfiles add --all
-    git -C ~/dotfiles commit -m "automated commit before pull"
-    git -C ~/dotfiles pull &> /dev/null
-    echo "~/dotfiles was updated from github repo!"
-    source ~/.zshrc
-elif [ $REMOTE = $BASE ]; then
-    # Need to push 
-    git -C ~/dotfiles push &> /dev/null
-    echo "~/dotfiles was just pushed to update github repo!"
-else
-    # Diverged
-fi
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -115,8 +94,8 @@ fi
 export SVNROOT="svn+ssh://svn/repos"
 
 #Add standards/sbin (allplans, etc.) to path if they exist
-if [ -d ~/standards/sbin/ ]; then
-    export PATH=$PATH:~/standards/sbin/
+if [ -d ~/svn/standards/sbin ]; then
+    export PATH=$PATH:~/svn/standards/sbin/
 fi
 
 #ccache setup
