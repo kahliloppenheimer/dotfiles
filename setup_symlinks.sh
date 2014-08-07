@@ -70,13 +70,4 @@ echo "remember that you must add 'set rtp+=~/.vim/bundle/vundle' to use vundle"
 
 vim +PluginInstall +qall
 
-# install YouCompleteMe vim plugin
-if [ -d ~/.vim/bundle/YouCompleteMe ]; then
-    cd ~/.vim/bundle/YouCompleteMe
-    ./install.sh --clang-completer
-    cd $dir
-fi
-
-
-
 
