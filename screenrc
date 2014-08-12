@@ -1,0 +1,3 @@
+# Allows mouse scroll in screen that scrolls over session (not local)
+# information
+termcapinfo xterm* ti@:te@
