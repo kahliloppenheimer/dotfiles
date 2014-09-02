@@ -19,8 +19,8 @@ if [ -f ~/.global_aliases ]; then
 fi
 
 # contains machine dependant aliases (i.e. directory names)
-if [ -f ~/.user_aliases ]; then
-    source ~/.user_aliases
+if [ -f ~/.local_aliases ]; then
+    source ~/.local_aliases
 fi
 
 
