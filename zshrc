@@ -9,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 # Preferred editor/theme for local and remote sessions
 if [[ -z $SSH_CONNECTION ]]; then
   export EDITOR='vim'
-  ZSH_THEME=amuse
+  ZSH_THEME="edvardm"
 else
   export EDITOR='vim'
   ZSH_THEME="kdawg"
