@@ -8,20 +8,6 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
-""""""""""""""" EXTENSIONS
-filetype off " Needed to be off for vundle, but is enabled later on
-
-" Vundle setup 
-set rtp+=~/.vim/bundle/vundle
-
-" All plugins must be added after this line
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-
-" All plugins must be added before this line
-filetype plugin indent on " reenabled after vundle setup complete
-
 """"""""""""""""" COLORS
 
 " enable syntax processing
