@@ -19,8 +19,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'scrooloose/syntastic'
-
 " All plugins must be added before this line
 filetype plugin indent on " reenabled after vundle setup complete
 
@@ -53,6 +51,9 @@ set autoindent
 " Indentation optimized for C/C++
 set cindent
 
+" Wrap same line rather than create new lines
+set textwidth=0
+set wrap
 
 """""""""""""""" UI CONFIG
 

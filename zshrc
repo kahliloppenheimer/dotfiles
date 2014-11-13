@@ -80,27 +80,3 @@ fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-#############################################
-# VERTICA SPECIFIC CONFIG
-
-# If ~/.Xmodmap exists, run it to add custom key
-# configurations
-if [ -f ~/.Xmodmap ]; then
-    xmodmap ~/.Xmodmap
-fi
-
-#Export $SVNROOT for SVN access
-export SVNROOT="svn+ssh://svn/repos"
-
-#Add standards/sbin (allplans, etc.) to path if they exist
-if [ -d ~/svn/standards/sbin ]; then
-    export PATH=$PATH:~/svn/standards/sbin/
-fi
-
-#ccache setup
-export CC="ccache gcc"
-export CXX="ccache g++"
-export CCACHE_DIR="/home/$USER/ccache"
-
-
