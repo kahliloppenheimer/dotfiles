@@ -81,3 +81,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Change terminal editor to use vi, rather than emacs, commands
+set -o vi
