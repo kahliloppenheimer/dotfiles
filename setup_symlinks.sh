@@ -63,10 +63,3 @@ fi
 
 install_zsh
 
-# install vundle
-echo "installing vundle"
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-vim +PluginInstall +qall
-
-
