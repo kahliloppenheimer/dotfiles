@@ -6,13 +6,13 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-# Preferred editor/theme for local and remote sessions
+ZSH_THEME="kdawg"
+
+# Preferred editor for remote sessions
 if [[ -z $SSH_CONNECTION ]]; then
   export EDITOR='vim'
-  ZSH_THEME="kdawg"
 else
-  export EDITOR='vim'
-  ZSH_THEME="kdawg"
+  export EDITOR='mvim'
 fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
