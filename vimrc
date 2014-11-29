@@ -37,10 +37,16 @@ set autoindent
 " Indentation optimized for C/C++
 set cindent
 
-" Wrap same line rather than create new lines
-set textwidth=0
+" Wrap words visually on line breaks
 set wrap
+" Only wrap around specific characters (i.e. not letters)
+set linebreak
+" List disables linebreak
+set nolist 
 
+" Prevent vim from automatically inserting line breaks in newly entered text
+set textwidth=0
+set wrapmargin=0
 """""""""""""""" UI CONFIG
 
 " show line numbers
@@ -88,3 +94,8 @@ let mapleader=","
 
 " Adds '_' to the list of word boundaries so that w will stop at underscores
 set iskeyword-=_
+" Ensures that navigation is by visual line rather than by physical line
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
