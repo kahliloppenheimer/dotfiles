@@ -30,8 +30,6 @@ if [ -f ~/.local_aliases ]; then
     source ~/.local_aliases
 fi
 
-
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -73,6 +71,8 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/X11/bin
+
+export PATH=$PATH:/usr/texbin/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 

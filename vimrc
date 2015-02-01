@@ -73,6 +73,9 @@ set lazyredraw
 " highlight matching [{()}]
 set showmatch
 
+" Show as much as possible of a wrapped last line, not just "@".
+set display=lastline    
+
 
 """""""""""""""" SEARCHING
 
@@ -99,3 +102,13 @@ nnoremap k gk
 nnoremap j gj
 nnoremap gk k
 nnoremap gj j
+
+
+"""""""""""""""" MISC
+
+" Autosaves when window loses focus
+autocmd BufLeave,FocusLost * silent! wall
+
+" Autocompile latex on save
+command PdfLatex execute "!pdflatex -interaction=nonstopmode % > /dev/null && rm -f *.{log,aux,out}"
+autocmd BufWritePost *.tex :PdfLatex
