@@ -1,12 +1,31 @@
 """"""""""""""""" COMPATABILITY
 " disable vi compatibility (emulation of old bugs)
-" Notable this must be done first because other settings
-" depend on this
 set nocompatible
 " set UTF-8 encoding
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
+
+""""""""""""""""" PLUGINS
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-surround'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 """"""""""""""""" COLORS
 
@@ -15,7 +34,6 @@ syntax enable
 
 
 """"""""""""""""" SPACES AND TABS
-
 " Fix vim backspace
 set backspace=indent,eol,start
 " number of visual spaces per tab
@@ -35,7 +53,7 @@ set expandtab
 set autoindent
 
 " Indentation optimized for C/C++
-set cindent
+" set cindent
 
 " Wrap words visually on line breaks
 set wrap
@@ -106,9 +124,18 @@ nnoremap gj j
 
 """""""""""""""" MISC
 
+" Set spellcheck
+set spell
+
 " Autosaves when window loses focus
 autocmd BufLeave,FocusLost * silent! wall
 
 " Autocompile latex on save
-command PdfLatex execute "!pdflatex -interaction=nonstopmode % > /dev/null && rm -f *.{log,aux,out}"
-autocmd BufWritePost *.tex :PdfLatex
+"command PdfLatex execute ":!pdflatex -interaction=nonstopmode % ; pdflatex -interaction=nonstopmode %; rm -f *.{log,aux,out}"
+
+"Command taken from .vim/ftplugin
+autocmd BufWritePost *.tex :BuildAndViewTexPdf
+
+"Autocompile graphviz with dot
+command PdfDot execute ":silent !dot -Tpdf % -o $(basename % .gv).pdf"
+autocmd BufWritePost *.gv :PdfDot
