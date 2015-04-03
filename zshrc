@@ -84,3 +84,6 @@ export PATH=$PATH:/usr/texbin/
 
 # Change terminal editor to use vi, rather than emacs, commands
 set -o vi
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/kahliloppenheimer/.gvm/bin/gvm-init.sh" ]] && source "/Users/kahliloppenheimer/.gvm/bin/gvm-init.sh"
