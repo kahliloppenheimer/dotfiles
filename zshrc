@@ -8,9 +8,10 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="kdawg"
 
+alias vim=mvim
 # Preferred editor for remote sessions
 if [[ -z $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+  export EDITOR='mvim'
 else
   export EDITOR='mvim'
 fi

@@ -23,6 +23,8 @@ Plugin 'gmarik/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-surround'
 
+Plugin 'altercation/vim-colors-solarized'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -31,6 +33,9 @@ filetype plugin indent on    " required
 
 " enable syntax processing
 syntax enable
+" Setup solarized color scheme
+set background=dark
+colorscheme solarized
 
 
 """"""""""""""""" SPACES AND TABS

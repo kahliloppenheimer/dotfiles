@@ -13,7 +13,7 @@ dir=~/dotfiles
 olddir=~/dotfiles_old             
 
 # list of files/folders to symlink in homedir
-files="vimrc vim zshrc oh-my-zsh global_aliases screenrc"   
+files="vimrc vim zshrc oh-my-zsh global_aliases screenrc gitignore_global default.tex"
 
 ##########
 
@@ -63,3 +63,6 @@ fi
 
 install_zsh
 
+echo "Setting .gitignore_global as global gitignore file..."
+git config --global core.excludesfile ~/.gitignore_global
+echo "done"
