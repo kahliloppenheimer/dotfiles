@@ -10,33 +10,24 @@ set termencoding=utf-8
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'w0ng/vim-hybrid'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-surround'
+call vundle#end()
+" load filetype-specific indent files
+filetype plugin indent on
 
-Plugin 'altercation/vim-colors-solarized'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 
 """"""""""""""""" COLORS
 
+"Use https://github.com/w0ng/vim-hybrid colorscheme
+:colorscheme hybrid
+
 " enable syntax processing
 syntax enable
-" Setup solarized color scheme
-set background=dark
-colorscheme solarized
-
 
 """"""""""""""""" SPACES AND TABS
 " Fix vim backspace
@@ -84,8 +75,6 @@ set cursorline
 " show column line at 81 character mark
 set colorcolumn=81
 
-" load filetype-specific indent files
-filetype indent on
 
 " visual autocomplete for command menu
 set wildmenu
