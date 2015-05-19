@@ -3,7 +3,7 @@ Setup Workstation
 
 This script eases the process of moving to new workstations.
 
-All you have to do is put all of your **dotfiles** (i.e. .vimrc, .zshrc, etc.) into a folder *$dir*. Each file in *$dir* should **not** be preceded by a **.**. Once you have *$dir* setup, simply run this script.
+All you have to do is put all of your **dotfiles** (i.e. .vimrc, .zshrc, etc.) into a folder *$dir*. Each file in *$dir* should **not** be preceded by a (**.**). Once you have *$dir* setup, simply run this script.
 
 If you store this script and *$dir* in a git repo, then all
 you need to do when moving to a new workstation is:
