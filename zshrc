@@ -8,20 +8,10 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="kdawg"
 
-alias vim=mvim
-# Preferred editor for remote sessions
-if [[ -z $SSH_CONNECTION ]]; then
-  export EDITOR='mvim'
-else
-  export EDITOR='mvim'
-fi
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Set editor
+export EDITOR='vim'
 
-# Store aliases in separate files for better organization. 
-
-# contains machine independant aliases (i.e. "ls --color=auto")
+# contains machine independent aliases (i.e. "ls --color=auto")
 if [ -f ~/.global_aliases ]; then
     source ~/.global_aliases
 fi
@@ -47,7 +37,7 @@ fi
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want to disable command autocorrection
-DISABLE_CORRECTION="true"
+# DISABLE_CORRECTION="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -81,10 +71,7 @@ export PATH=$PATH:/usr/texbin/
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
 
 # Change terminal editor to use vi, rather than emacs, commands
 set -o vi
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/kahliloppenheimer/.gvm/bin/gvm-init.sh" ]] && source "/Users/kahliloppenheimer/.gvm/bin/gvm-init.sh"

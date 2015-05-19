@@ -23,6 +23,9 @@ filetype plugin indent on
 
 """"""""""""""""" COLORS
 
+" Add support for 256-colors for iTerm2
+set t_Co=256
+
 "Use https://github.com/w0ng/vim-hybrid colorscheme
 :colorscheme hybrid
 
@@ -62,6 +65,12 @@ set nolist
 set textwidth=0
 set wrapmargin=0
 """""""""""""""" UI CONFIG
+" Set insert mode cursors to be straight line
+let &t_SI = "\<Esc>]50;CursorShape=1\x7" 
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Hack to get rid of delay when cursor is switching into escape mode
+inoremap <special> <Esc> <Esc>hl
 
 " show line numbers
 set number
