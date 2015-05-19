@@ -77,9 +77,15 @@ install_homebrew() {
 install_git() {
     if ! hash git 2> /dev/null; then
         echo "Installing git..."
-        brew install git
+        # If the platform is Linux, try an apt-get to install git
+        if [[ $platform == 'Linux' ]]; then
+            sudo apt-get install git > /dev/null
+        # If the platform is OS X, try using brew to install git
+        elif [[ $platform == 'Darwin' ]]; then
+            brew install git > /dev/null
+        fi
     fi
-    echo "Setting .gitignore_global as global gitignore file..."
+    echo "Setting $dir$/gitignore_global as global gitignore file..."
     git config --global core.excludesfile ~/.gitignore_global > /dev/null
 }
 
