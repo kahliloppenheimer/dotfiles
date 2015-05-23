@@ -6,6 +6,9 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
+# Setup path for os x
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/X11/bin
+
 ZSH_THEME="kdawg"
 
 # Set editor
@@ -61,9 +64,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/X11/bin
 
-export PATH=$PATH:/usr/texbin/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 
@@ -75,3 +76,4 @@ export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
 
 # Change terminal editor to use vi, rather than emacs, commands
 set -o vi
+
