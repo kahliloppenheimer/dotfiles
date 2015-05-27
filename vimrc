@@ -102,6 +102,8 @@ set showmatch
 " Show as much as possible of a wrapped last line, not just "@".
 set display=lastline    
 
+" Show file name at bottom of editor
+set laststatus=2
 
 """""""""""""""" SEARCHING
 
