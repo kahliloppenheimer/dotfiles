@@ -21,6 +21,11 @@ call vundle#end()
 filetype plugin indent on
 
 
+""""""""""""""""" ctags support
+" Recursively search parent directories for tags file
+set tags=./tags;
+
+
 """"""""""""""""" COLORS
 
 " Add support for 256-colors for iTerm2
