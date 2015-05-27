@@ -40,4 +40,12 @@ Thumbs.db
 # MISC Files #
 ##############
 *.lock
+#vim temp files
 *.swp
+#ctags
+tags
+
+# Node.js #
+###########
+node_modules/
+
