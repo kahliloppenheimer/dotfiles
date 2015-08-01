@@ -149,6 +149,3 @@ autocmd BufWritePost *.tex :BuildAndViewTexPdf
 "Autocompile graphviz with dot
 command PdfDot execute ":silent !dot -Tpdf % -o $(basename % .gv).pdf"
 autocmd BufWritePost *.gv :PdfDot
-
-" Use system clipboard for copy/paste rather than vim internal clipboard
-set clipboard=unnamed
