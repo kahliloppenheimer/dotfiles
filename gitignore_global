@@ -49,3 +49,7 @@ tags
 ###########
 node_modules/
 
+# IDE Settings #
+################
+.idea/
+
