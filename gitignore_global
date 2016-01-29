@@ -53,3 +53,8 @@ node_modules/
 ################
 .idea/
 
+# Python #
+##########
+*.pyc
+*.p
+#
