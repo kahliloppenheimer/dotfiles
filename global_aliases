@@ -3,3 +3,9 @@
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+alias gap="git add --patch"
+alias gd="git diff"
+alias gs="git status"
+alias gc="git commit"
+alias "git co"="git checkout"

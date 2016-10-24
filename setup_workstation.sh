@@ -29,13 +29,13 @@
 setup_environment() {
     # New directory in which you want to store all of your new dot files
     dir=~/dotfiles
-    
+
     # Old directory to which you want to move all of your old dot files
     olddir=~/dotfiles_old
 
     # list of files/folders to symlink from ~/ into dotfiles
     # (each name should be preceded by a '.', i.e. '.vimrc' or '.zshrc')
-    files="vimrc zshrc oh-my-zsh global_aliases screenrc gitignore_global default.tex"
+    files="vimrc zshrc editorconfig oh-my-zsh global_aliases screenrc gitignore_global default.tex"
 
     # Current OS (notably Linux = 'Linux' and OS X = 'Darwin')
     platform=$(uname)
@@ -69,7 +69,7 @@ create_dotfiles() {
 install_homebrew() {
     if [[ ! -f /usr/local/bin/brew && $platform == 'Darwin' ]]; then
         echo "Installing homebrew..."
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
 }
 
@@ -99,7 +99,7 @@ setup_vundle() {
     vim +PluginInstall +qall &> /dev/null
 }
 
-# Installs zsh and sets up with 
+# Installs zsh and sets up with
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [[ -f /bin/zsh || -f /usr/bin/zsh ]]; then

@@ -70,7 +70,4 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
 
-# Change terminal editor to use vi, rather than emacs, commands
-set -o vi
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
